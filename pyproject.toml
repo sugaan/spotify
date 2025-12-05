@@ -1,0 +1,20 @@
+[project]
+name = "spotify-loader"
+version = "0.1.0"
+description = "CLI tool to load Spotify CSV data to PostgreSQL"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.0",
+    "sqlalchemy>=2.0",
+    "psycopg2-binary>=2.9",
+    "python-dotenv>=1.0",
+    "click>=8.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+spotify-loader = "src.loader:cli"
